@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS - Overriding directives.</title>
+</head>
+<body ng-app="OverridingDirectivesApp"
+      ng-controller="RootController as root">
+
+
+    <original-directive greetings="{{ root.messages.original }}"></original-directive>
+    <hr>
+    <div extended-original-directive
+         greetings="{{ root.messages.extended }}"></div>
+
+    <!-- scripts -->
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="scripts/constants.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controller.js"></script>
+    <script src="scripts/directives/original-directive.js"></script>
+    <script src="scripts/directives/extended-original-directive.js"></script>
+
+    <!--<script type="text/ng-template"-->
+            <!--id="extended-original-directive-template.html">-->
+        <!--<div>-->
+            <!--<p>Extended Original Directive</p>-->
+            <!--<p>HELLO - {{ $ctrl.greetings }}!!!</p>-->
+            <!--{{ $ctrl.exampleText }}-->
+            <!--<button ng-click="$ctrl.showAlert()">Click to show alert</button>-->
+        <!--</div>-->
+    <!--</script>-->
+
+</body>
+</html>
