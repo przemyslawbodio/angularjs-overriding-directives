@@ -7,7 +7,6 @@
 <body ng-app="OverridingDirectivesApp"
       ng-controller="RootController as root">
 
-
     <original-directive greetings="{{ root.messages.original }}"></original-directive>
     <hr>
     <div extended-original-directive
@@ -20,16 +19,6 @@
     <script src="scripts/controller.js"></script>
     <script src="scripts/directives/original-directive.js"></script>
     <script src="scripts/directives/extended-original-directive.js"></script>
-
-    <!--<script type="text/ng-template"-->
-            <!--id="extended-original-directive-template.html">-->
-        <!--<div>-->
-            <!--<p>Extended Original Directive</p>-->
-            <!--<p>HELLO - {{ $ctrl.greetings }}!!!</p>-->
-            <!--{{ $ctrl.exampleText }}-->
-            <!--<button ng-click="$ctrl.showAlert()">Click to show alert</button>-->
-        <!--</div>-->
-    <!--</script>-->
 
 </body>
 </html>
